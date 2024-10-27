@@ -18,4 +18,7 @@ public class Circle implements Shape {
     public String borderColor() {
         return "black";
     }
+    public String fillingColor() {
+        return "red";
+    }
 }

@@ -9,11 +9,11 @@ public class Main {
         dog.run(28);
         dog.swim(50);
         cat.swim(2);
-        cat.eat(15, bowl);
+        bowl.fill(26);
+        cat.eat(bowl);
         Cat cats[] = {new Cat("Пушок"), new Cat("Рыжик"), new Cat("Беляш")};
-        bowl.fill(45);
         for (int i = 0; i < cats.length; ++i) {
-            cats[i].eat(16, bowl);
+            cats[i].eat(bowl);
         }
 
         Animal.printCounts();

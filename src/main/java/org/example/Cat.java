@@ -1,10 +1,10 @@
 package org.example;
 
 public class Cat extends Animal {
-    private boolean fed_up;
+    private int fed;
     public Cat(String name) {
         super(name);
-        fed_up = false;
+        fed = 0;
     }
     @Override
     public void run(int distance) {
@@ -18,13 +18,15 @@ public class Cat extends Animal {
     public void swim(int distance) {
         System.out.println(name + ": мы, коты, не умеем плавать");
     }
-    public void eat(int thing, Bowl bowl) {
-        if (fed_up) {
+    public void eat(Bowl bowl) {
+        if (fed == 10) {
             System.out.println(name + " уже сыт");
+            return;
         }
-        else if (bowl.take(thing)) {
-            fed_up = true;
-            System.out.println(name + " съел " + thing + " шт еды");
+        int to_eat = 10 - fed;
+        if (bowl.take(to_eat)) {
+            fed += to_eat;
+            System.out.println(name + " наелся");
         }
         else
             System.out.println(name + " не поел");

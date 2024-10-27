@@ -17,6 +17,9 @@ public class Rectangle implements Shape {
     public double perimeter() {
         return (a + b) * 2;
     }
+    public String borderColor() {
+        return "black";
+    }
     public String fillingColor() {
         return "orange";
     }

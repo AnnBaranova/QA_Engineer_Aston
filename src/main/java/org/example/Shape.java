@@ -1,12 +1,12 @@
 package org.example;
 
 public interface Shape {
-    public double square();
-    public double perimeter();
-    default public String borderColor() {
-        return "blue";
+    default double square() {
+        throw new UnsupportedOperationException();
     }
-    default public String fillingColor() {
-        return "red";
+    default double perimeter() {
+        throw new UnsupportedOperationException();
     }
+    public String borderColor();
+    public String fillingColor();
 }

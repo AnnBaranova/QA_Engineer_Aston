@@ -20,4 +20,10 @@ public class Triangle implements Shape {
     public double perimeter() {
         return a + b + c;
     }
+    public String borderColor() {
+        return "blue";
+    }
+    public String fillingColor() {
+        return "red";
+    }
 }
